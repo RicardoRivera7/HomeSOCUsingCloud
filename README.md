@@ -234,7 +234,7 @@ This is proof that the logs were generated correctly, so when we use Microsoft S
 <br/>
 <br/>
 
-<h4>If Failed logins aren't showing up here's how to fix (Optional)</h4>
+<h3>If Failed logins aren't showing up here's how to fix (Optional)</h3>
 If the logs were not showing in the event viewer it's possible the firewall is blocking them, so to make this easy we can turn it off <br/>
 Go to the search bar and type in the following: <strong>wf.msc</strong> <br/>
 At the top click on "Actions" and then "Properties" <br/>
