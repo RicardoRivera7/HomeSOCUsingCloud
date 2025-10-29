@@ -202,6 +202,55 @@ Select "Yes" for the certificate pop up and you should be logged into your VM <b
 <br/>
 <br/>
 
+<h2>Configuration in the Virtual Machine</h2>
+Here we can do a couple things to make sure security events are being ingested and that the Monitoring agent was installed correctly <br/>
+First to check if the "Microsoft Monitoring Agent" was installed, click on the search bar <br/>
+Search for the "Run" app <br/>
+In the "Run" app type the following command: appwiz.cpl <br/>
+Here you should see programs that are installed, you should see "Microsoft Monitoring Agent" <br/>
+<img src="https://i.imgur.com/IHefB2A.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Now let's verify the security logs we generated earlier are showing up on this side <br/>
+In the search bar type in "Event Viewer" and open it <br/>
+On the left side click on the arrow next to "Windows Logs" to show the dropdown options <br/>
+Click on "Security" <br/>
+<img src="https://i.imgur.com/IBa6uAd.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+On the right hand side, click on "Filter Current Log" <br/>
+This will open a pop up, here you will see a section thats says "<All Event IDs'>" <br/>
+In that section we will type in: 4625 (This is the event ID associated with failed logins which we generated earlier) <br/>
+<img src="https://i.imgur.com/aAw4nec.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Click "OK" and it should now show you all of the failed authentication attempts <br/>
+Click on one and you can see more about it <br/>
+This is proof that the logs were generated correctly, so when we use Microsoft Sentinel it should appear there too once setup <br/>
+<img src="https://i.imgur.com/Lkl1gTA.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+<h4>If Failed logins aren't showing up here's how to fix (Optional)</h4>
+If the logs were not showing in the event viewer it's possible the firewall is blocking them, so to make this easy we can turn it off <br/>
+Go to the search bar and type in the following: <strong>wf.msc</strong> <br/>
+At the top click on "Actions" and then "Properties" <br/>
+Go to each of the firewall profiles Domain, Private, and Public and set the "Firewall State" to "OFF" <br/>
+<img src="https://i.imgur.com/3q8A8ek.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Click "Apply" then "Ok" to save your changes <br/>
+You have have to logoff the VM and do more failed logins to generate some more <br/>
+Then go back to event viewer and you should see the failed logins now! <br/>
+
+
+
+
+
 <h2>Configuring Microsoft Sentinel</h2>
 
 
