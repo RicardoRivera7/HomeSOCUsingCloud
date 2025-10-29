@@ -177,6 +177,7 @@ Type in the command "Heartbeat" and click run <br/>
 
 There should be some output, this shows its connected <br/>
 
+
 <h2>Connecting to the Virtual Machine</h2>
 
 <h2>Configuring Microsoft Sentinel</h2>
