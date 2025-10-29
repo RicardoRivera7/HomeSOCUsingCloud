@@ -292,5 +292,35 @@ Go back to the "Data Connectors" section and look to see if the "Windows Securit
 <br/>
 
 <h2>Using Sentinel to Check the Security Events</h2>
+
+Let's Navigate to the Sentinel you created and once in click on "Logs" on the left side <br/>
+Close the popup window it gives you <br/>
+On the right hand corner where it says "Simple Mode", click on it and select "KQL Mode" <br/>
+Type in the following: <strong>SecurityEvent</strong> <br/>
+Click the blue "Run" button <br/>
+You should see a bunch of logs pop up <br/>
+<img src="https://i.imgur.com/TpIzCkx.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Now let's find our logs where there where failed login attempts (Note: may have to create more failed login attempts since Sentinel wasn't setup before) <br/>
+Type the following command in: <br/>
+```
+SecurityEvent
+| where EventID == 4625
+```
+<br/>
+
+You should now see all of the attempts you generated for failed logins <br/>
+<img src="https://i.imgur.com/JErhHxU.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+You can click the arrow to expand information about the generated log <br/>
+<img src="https://i.imgur.com/UvoxcvX.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Congrats on setting up your Azure cloud SOC lab! <br/>
   
 </p>
