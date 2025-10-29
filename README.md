@@ -1,4 +1,4 @@
-<h1>Home SOC with Cloud (Azure) and Microsoft Sentinel Sen</h1>
+<h1>Home SOC with Cloud (Azure) and Microsoft Sentinel</h1>
 
 
 <h2>Description</h2>
