@@ -248,12 +248,49 @@ You have have to logoff the VM and do more failed logins to generate some more <
 Then go back to event viewer and you should see the failed logins now! <br/>
 
 
-
-
-
 <h2>Configuring Microsoft Sentinel</h2>
 
+Let's head back to Azure and Navigate to the homepage <br/>
+Search for or click on "Microsoft Sentinel" <br/>
+Click "Create" <br/>
+Select the Log Analystics Workspace you created and click "Add" <br/> 
+This can take a bit of time so just wait <br/>
+<img src="https://i.imgur.com/r0Nxuy3.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
 
+On the left side go to the "Configuration" section and in that section click on "Data Connectors" <br/>
+Here you can see all of the Add-Ons that are currently connected to your Microsoft Sentinel <br/>
+Click on "Content Hub" near the search bar <br/>
+<img src="https://i.imgur.com/dBpK7rX.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
 
+In the Search bar for the Content Hub page, search for "Security Events" <br/>
+Under "Content Title", find the one that says "Windows Security Events" and click on the checkbox next to it <br/>
+Click the blue "Install" button <br/>
+<img src="https://i.imgur.com/9qzSAo1.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Once installed click on the blue "Manage" button where "install" was located previously <br/>
+Under "Content Name", find "Windows Security Events via AMA" and select the checkbox next to it <br/>
+Click the blue "Open Connector Page" <br/>
+Click the "+Create Data Collection Rule" button <br/>
+Under "Rule name", set it to whatever you want <br/>
+Make sure under "Resource Group" that it's the one you've been using so far <br/>
+<img src="https://i.imgur.com/2HUo5NU.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Click "Next" until you get to the Collect section <br/>
+Make sure "All Security Events" is selected <br/>
+Click "Next" and then click the blue "Create" button <br/>
+Go back to the "Data Connectors" section and look to see if the "Windows Security Events via AMA" is there and connected <br/>
+<img src="https://i.imgur.com/DEjdajl.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+<h2>Using Sentinel to Check the Security Events</h2>
   
 </p>
