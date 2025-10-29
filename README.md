@@ -127,7 +127,7 @@ You should get a depployment page and confirmation it has been deployed, this co
 <br/>
 <br/>
 
-<h2> Creating and Configuring Log Analytics Workspace/h2>
+<h2>Creating and Configuring Log Analytics Workspace</h2>
 
 Navigate back to the home page <br/>
 Under "Azure Services", click on the arrow that says "More Services" <br/>
