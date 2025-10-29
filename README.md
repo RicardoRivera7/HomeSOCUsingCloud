@@ -179,6 +179,28 @@ There should be some output, this shows its connected <br/>
 
 
 <h2>Connecting to the Virtual Machine</h2>
+Let's connect to our Windows VM, go to your Desktop and click in the Search bar <br/>
+Search for "Remote Desktop Connection" and open it <br/>
+<img src="https://i.imgur.com/dkjOmZQ.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+On the Azure Homepage, click on the Virtual Machine you made <br/>
+On the leftside click on "Overview" <br/>
+Under the Networking section there should be a "Public IP Address" section <br/>
+This will be the IP you use to connect to the machine using the "Remote Desktop Connection" you opened earlier <br/>
+<img src="https://i.imgur.com/7NiTUqG.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Enter the IP on your "Remote Desktop Connection" app <br/>
+Enter the username you created earlier <br/>
+Before we enter the correct password you made earlier, enter some wrong passwords so we can generate some security events <br/>
+Now log in using your Password <br/>
+Select "Yes" for the certificate pop up and you should be logged into your VM <br/>
+<img src="https://i.imgur.com/aguUaYK.jpeg" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
 
 <h2>Configuring Microsoft Sentinel</h2>
 
