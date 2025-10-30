@@ -322,5 +322,79 @@ You can click the arrow to expand information about the generated log <br/>
 <br/>
 
 Congrats on setting up your Azure cloud SOC lab! <br/>
-  
+
+<h2>Creating Alerts</h2>
+
+Navigate to your Microsoft Sentinel resource <br/>
+On the left side click "Analyitics" <br/>
+Sometimes the page may say it has been moved and to click the link to go to the Defender portal, if it does just click it <br/>
+<img src="https://i.imgur.com/UvoxcvX.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+In "Analyitics" Click the "Create" button at the top <br/>
+Here you can choose a "scheduled rule or a "NRT rule" (Near-real-time) <br/>
+Choose what you think is best, I'll choose scheduled for now <br/> 
+<img src="https://i.imgur.com/9hu1Yth.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Let's begin creating the rule <br/>
+First enter a name for the rule you are going to create, im doing one for failed logins so I named mine "InvalidLogin" <br/>
+You can also create a description for the alert if you want <br/>
+The Severity will be up to you, I leave mine at Medium <br/>
+You can also add the type of MITRE ATT&CK, in my case I would add "Intial Access" and  under that section add "Valid account" <br/>
+<img src="https://i.imgur.com/BOGYajx.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Click "Next" <br/>
+In "Rule Query" we must write the rule like we did previously when we did the command: SecurityEvent <br/>
+In this case I want failed logins and specifically for my user so I'll enter the following: <br/>
+```
+SecurityEvent
+| where EventID == 4625 
+| where Account contains "SOCanalyst"
+```
+<br/>
+
+You can replace the "SOCanalyst" with whatever username you created <br/>
+If you click the blue "View Query Results" link, it will take you to a page where you can run you query to see if it works! <br/>
+<img src="https://i.imgur.com/GpYmksd.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Under "Query Scheduling" we can set how often we want these alerts to get ran to try and detect something <br/>
+For the purposes of testing we will make "Run Query Every" section to 5 Minutes <br/>
+We will then go to the "Lookup data from the last" and make this 1 day <br/>
+<img src="https://i.imgur.com/GpYmksd.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+The "Alert Threshold" I will leave as 0 but you can also set it to 1 (this is if the alert appears more than once) <br/>
+Click "Next" until you see the blue "save" button <br/>
+Click it <br/>
+You should now see your Alert created <br/>
+<img src="https://i.imgur.com/mNWkTmd.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+<h2>Testing the Alert</h2>
+
+On the left side Click on "Investigation and Response" -> then on "Incidents and Alerts" <br/>
+Click on "Incidents" <br/>
+Generate some more invalid logins attempts <br/>
+Wait a couple of minutes and click the "refresh" button in incidents <br/>
+You can see I generated some <br/>
+<img src="https://i.imgur.com/XzNJpzj.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+If we click on it we can view all the details including the query that was ran which will give us things such as time generated <br/>
+<img src="https://i.imgur.com/LPcRoW7.png" height="80%" width="80%" alt="AzureCloudSOC"/>
+<br/>
+<br/>
+
+Congrats you have created and tested an alert! <br/>
+
 </p>
