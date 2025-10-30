@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This is a guide to build a security operations center on the cloud utilizing Microsoft Azure. We will be building an attack surface with utilzing Microsoft Sentinel as the SIEM, and logging and analyzing those attack attempts! I also show how to create Alerts and how to test them using Sentinel.
+This is a guide to build a security operations center on the cloud utilizing Microsoft Azure. We will be building an attack surface which will utilize Microsoft Sentinel as the SIEM, and logging and analyzing those attack attempts! I also show how to create Alerts and how to test them using Sentinel.
 <br />
 
 <h2>Prerequisites</h2>
