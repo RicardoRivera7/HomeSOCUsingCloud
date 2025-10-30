@@ -25,14 +25,12 @@ This is a guide to build a security operations center on the cloud utilizing Mic
 -[Azure Virtual Machines](https://portal.azure.com)
 <br/>
 
-<h2>Downloads</h2>
+<!-- <h2>Downloads</h2>
 
 -[Geographic IP Information](https://drive.google.com/file/d/13EfjM_4BohrmaxqXZLB5VUBIz2sv9Siz/view?usp=sharing)
 <br/>
 -[Attack Map](https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view?usp=drive_link)
-<br/>
-
-
+<br/> -->
 
 
 
