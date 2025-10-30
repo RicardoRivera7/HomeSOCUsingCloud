@@ -24,6 +24,8 @@ This is a guide to build a security operations center on the cloud utilizing Mic
 <br/>
 -[Azure Virtual Machines](https://portal.azure.com)
 <br/>
+<br/>
+<br/>
 
 <!-- <h2>Downloads</h2>
 
