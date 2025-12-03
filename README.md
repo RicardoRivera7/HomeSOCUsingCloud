@@ -113,7 +113,7 @@ Under "Licensing" check the box </em><br/>
 <br/>
 <br/>
 
-Click "Next" until you get to the "Netowrking section" <br/>
+Click "Next" until you get to the "Networking section" <br/>
 Find the checkbox for "Delete public IP and NIC when VM is deleted" and check it, this will make sure your VM and anything associated with it is completley wiped if you delete it <br/>
 
 <img src="https://i.imgur.com/3g1yKSm.png" height="80%" width="80%" alt="AzureCloudSOC"/>
