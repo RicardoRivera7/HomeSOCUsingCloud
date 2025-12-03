@@ -122,7 +122,7 @@ Find the checkbox for "Delete public IP and NIC when VM is deleted" and check it
 
 Click the blue "Review + Create" button <br/>
 Then click the blue "Create" button <br/>
-You should get a depployment page and confirmation it has been deployed, this could take a minute <br/>
+You should get a deployment page and confirmation it has been deployed, this could take a minute <br/>
 <img src="https://i.imgur.com/m78nNGU.png" height="80%" width="80%" alt="AzureCloudSOC"/>
 <br/>
 <br/>
